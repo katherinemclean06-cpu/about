@@ -77,11 +77,16 @@
   font-optical-sizing: auto;
   background-color: white;
   font-size: 95px;
-  padding: 40px;
+  padding: 10px 40px;
   font-family: "Truculenta", Georgia, serif;
   }
   
   h2 {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
   text-align: center;
   color: #6A251A;
   font-optical-sizing: auto;
@@ -90,6 +95,13 @@
   padding: 0px;
   margin: 5px;
   font-family: "Truculenta", Georgia, serif;
+  }
+  
+  h2::before,
+  h2::after {
+  content: "★";
+  color: #6A251A;
+  font-size: 30px;
   }
   
   p {
@@ -106,7 +118,7 @@
   font-size: 25px;
   font-style: normal;
   text-align: center;
-  width: 900; 
+  width: 725px; 
   margin: auto;
   }
     
@@ -120,12 +132,16 @@
   ul li {
   display: block;
   text-align: center;
-  padding: 25px;
+  padding: 10px 25px 15px;
   float: left;
+  line-height: 2.5;
   }
   
   ul li a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 10px;
   color: white;
   }
   
@@ -154,7 +170,6 @@
       <nav>
         <ul>
           <li><a href="/">HOME</a></li>
-          <li><a href="/">SHOOTS</a></li>
           <li><a href="/">PEOPLE</a></li>
           <li><a href="/">PLACES</a></li>
           <li><a href="/">NATURE</a></li>
@@ -163,7 +178,7 @@
     </nav>
   </div>
   
-  <h2>ABOUT:</h2>
+  <h2>ABOUT ME!</h2>
   
   <div class="about-container">
     <img src="DSC_0149.JPG" alt="Blonde haired girl (ME!) smiling in a corn field while holding a pumpkin." width="375" height="475px">
