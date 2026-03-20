@@ -27,12 +27,32 @@
   margin-left: 50px;
   }
      
-  .header {
+   .header {
+  position: relative;
   padding-bottom: 50px;
   padding-top: 15px;
   text-align: center;
-  background: #6A251A;
-  }
+  overflow: hidden;
+  background-image: url("katie.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+  .header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("katie.png");
+  background-size: cover;
+  background-position: 60% 40%;
+
+  filter: brightness(100%); /* ONLY affects image */
+  z-index: 0;
+}
+  .header * {
+  position: relative;
+  z-index: 1;
+}
   .fa {
   padding: 5px;
   font-size: 30px;
@@ -72,6 +92,10 @@
   }
     
   h1 { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
   text-align: center;
   color: #6A251A;
   font-optical-sizing: auto;
@@ -79,6 +103,13 @@
   font-size: 95px;
   padding: 10px 40px;
   font-family: "Truculenta", Georgia, serif;
+  }
+    
+  h1::before,
+  h1::after {
+  content: "★";
+  color: #6A251A;
+  font-size: 40px; /* slightly bigger to match h1 */
   }
   
   h2 {
@@ -153,7 +184,7 @@
   font-style: Arial, georgia, sans serif;
   font-size: 20px;
   text-align: center;
-  background: #6A251A;
+  background: #3B3939;
   color: white;
   margin-top: 15px;
   padding-top: 25px;
